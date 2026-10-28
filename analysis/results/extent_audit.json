@@ -1,0 +1,78 @@
+[
+  {
+    "city": "Wulumuqishi",
+    "n_grid": 116805,
+    "geom_type": "{'Point': 116805}",
+    "spacing_m": {
+      "dx_median_m": 1.7108152656583115,
+      "dy_median_m": 2.0579267852008343,
+      "dx_p10_m": 1.11125895625446,
+      "dy_p10_m": 1.1682182447984815
+    },
+    "cell_area_km2_median": 0.0,
+    "cell_area_km2_mean": 0.0,
+    "cell_area_km2_min": 0.0,
+    "cell_area_km2_p10": 0.0,
+    "sum_cell_polygon_area_km2": 0.0,
+    "nominal_n_times_median_km2": 0.0,
+    "admin_polygon_area_km2": 13779.20571223041,
+    "centroid_inside_admin_n": 116805,
+    "clipped_intersection_area_km2": 0.0,
+    "n_after_clip": 116805,
+    "union_area_km2": null,
+    "n_finite_lst_label": 116805,
+    "n_finite_lst_pred": 116805,
+    "n_population_nonnull": 116805,
+    "n_population_positive": 18645,
+    "grid_bounds_wgs84": [
+      86.80061264333288,
+      42.92689416693543,
+      88.97094236976565,
+      44.996612581546856
+    ],
+    "admin_bounds_wgs84": [
+      86.79498400219776,
+      42.92239265675885,
+      88.97342875666472,
+      45.00043181865948
+    ]
+  },
+  {
+    "city": "Yiningshi",
+    "n_grid": 21887,
+    "geom_type": "{'Point': 21887}",
+    "spacing_m": {
+      "dx_median_m": 1.0630598299903795,
+      "dy_median_m": 125.47435522824526,
+      "dx_p10_m": 1.0151889619184657,
+      "dy_p10_m": 2.2615346470847726
+    },
+    "cell_area_km2_median": 0.0,
+    "cell_area_km2_mean": 0.0,
+    "cell_area_km2_min": 0.0,
+    "cell_area_km2_p10": 0.0,
+    "sum_cell_polygon_area_km2": 0.0,
+    "nominal_n_times_median_km2": 0.0,
+    "admin_polygon_area_km2": 642.4095809295101,
+    "centroid_inside_admin_n": 21886,
+    "clipped_intersection_area_km2": 0.0,
+    "n_after_clip": 21886,
+    "union_area_km2": 0.0,
+    "n_finite_lst_label": 21887,
+    "n_finite_lst_pred": 21887,
+    "n_population_nonnull": 21887,
+    "n_population_positive": 10769,
+    "grid_bounds_wgs84": [
+      81.06486955422974,
+      43.83868418031677,
+      81.49606089060711,
+      44.29862160578597
+    ],
+    "admin_bounds_wgs84": [
+      81.06101260887351,
+      43.83684725886844,
+      81.49947598364201,
+      44.30118677550184
+    ]
+  }
+]

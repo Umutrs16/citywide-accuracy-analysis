@@ -1,0 +1,588 @@
+{
+  "population": {
+    "assignment": "Each sample point is the center of a nominal square in the local UTM projection (400 m for Urumqi, 200 m for Yining). 100 m population counts are summed by rasterizing those squares. A pixel covered by more than one square is assigned to one square only, so people are not double-counted. The squares are not a partition of the administrative polygon.",
+    "raster_files_local": false,
+    "roi_method": "ee.Reducer.sum @ 100 m over county union",
+    "geometry_urumqi": {
+      "raster_m": 100.0,
+      "nominal_square_km2": 18688.8,
+      "union_km2": 13614.91,
+      "overlap_pixel_km2": 10695.54,
+      "exclusive_km2": 2919.37,
+      "max_overlap_count": 4,
+      "mean_overlap_where_covered": 2.1447919964215703,
+      "stacked_km2": 29201.15
+    },
+    "geometry_yining": {
+      "raster_m": 50.0,
+      "nominal_square_km2": 875.48,
+      "union_km2": 641.17,
+      "overlap_pixel_km2": 499.615,
+      "exclusive_km2": 141.555,
+      "max_overlap_count": 4,
+      "mean_overlap_where_covered": 2.133463044122464,
+      "stacked_km2": 1367.9125000000001
+    },
+    "ghsl_grid_sum": 4193398.8986167517,
+    "ghsl_roi_sum": 4183223.2554535544,
+    "ghsl_grid_over_roi": 1.0024324886676634,
+    "worldpop_grid_sum": 3638600.8474675403,
+    "worldpop_roi_sum": 3626228.026211942,
+    "worldpop_grid_over_roi": 1.0034120361891647,
+    "census": 4054369,
+    "priority_positive": {
+      "n_positive": 933,
+      "n_below_1": 378,
+      "n_below_10": 564,
+      "min": 1.4647877571535163e-06,
+      "median": 2.645903001339877,
+      "p90": 4085.7164379897886,
+      "max": 22164.05271158946,
+      "mean": 1292.153166104309,
+      "share_top10": 0.13738048733580038,
+      "share_top50": 0.4112324936351519,
+      "share_top100": 0.60729782445603,
+      "share_top450": 0.9997678211764481,
+      "total_people_raw": 1205578.9039753203
+    },
+    "demand450_share_of_priority_pop": 0.9997678211764458,
+    "complement_n": 483,
+    "complement_people_raw": 279.90989162707183,
+    "complement_mean": 0.5795235851492171,
+    "complement_median": 0.20269300179961372,
+    "complement_max": 3.4929295796347226,
+    "census_scaled_complement": 270.6296288150663
+  },
+  "no_terrain_full_precision": {
+    "citywide_model_on_built": {
+      "n": 865,
+      "R2": 0.32931743566799954,
+      "RMSE": 4.133086523339449,
+      "MAE": 2.7844929890732932,
+      "Bias": -0.2022011202807987,
+      "NRMSE": 0.8189521135768564,
+      "Spearman": 0.5832087315140556,
+      "top20_recall": 0.4508670520231214,
+      "y_sd": 5.046798774702191
+    },
+    "built_refit": {
+      "n": 865,
+      "R2": 0.32883552171140595,
+      "RMSE": 4.134571155948797,
+      "MAE": 2.7296908414612626,
+      "Bias": -0.05658546701453244,
+      "NRMSE": 0.8192462867102871,
+      "Spearman": 0.6496021598209097,
+      "top20_recall": 0.48554913294797686,
+      "y_sd": 5.046798774702191
+    },
+    "note": "R2 and RMSE agree through the third and second reported digits. They are not the same prediction vector. Spearman and hot-fifth recall differ."
+  },
+  "recall_bootstrap": {
+    "citywide_model_on_built_rows": {
+      "point": 0.5491329479768786,
+      "p05": 0.5026536312849162,
+      "p50": 0.5623150887573964,
+      "p95": 0.6142156862745098,
+      "n_boot": 300
+    },
+    "built_refit": {
+      "point": 0.5375722543352601,
+      "p05": 0.4886231501057083,
+      "p50": 0.5526406094506022,
+      "p95": 0.6080599628359062,
+      "n_boot": 300
+    }
+  },
+  "learning_curve": [
+    {
+      "n_train": 80,
+      "n_test": 196,
+      "repeats": 6,
+      "R2_mean": 0.36184109599580855,
+      "RMSE_mean": 3.5055725556199717,
+      "recall_mean": 0.4625000000000001,
+      "recall_sd": 0.0746519702798705
+    },
+    {
+      "n_train": 160,
+      "n_test": 196,
+      "repeats": 6,
+      "R2_mean": 0.5402438827180761,
+      "RMSE_mean": 2.9722052575031745,
+      "recall_mean": 0.5041666666666667,
+      "recall_sd": 0.04429227421972771
+    },
+    {
+      "n_train": 320,
+      "n_test": 196,
+      "repeats": 6,
+      "R2_mean": 0.6226064308760307,
+      "RMSE_mean": 2.6958974722501527,
+      "recall_mean": 0.5458333333333333,
+      "recall_sd": 0.03930825471690251
+    },
+    {
+      "n_train": 600,
+      "n_test": 196,
+      "repeats": 6,
+      "R2_mean": 0.7010543336245748,
+      "RMSE_mean": 2.401339540979523,
+      "recall_mean": 0.6124999999999999,
+      "recall_sd": 0.01909406539564935
+    },
+    {
+      "n_train": 669,
+      "n_test": 196,
+      "repeats": 1,
+      "R2_mean": 0.7188127150750554,
+      "RMSE_mean": 2.3297580116420207,
+      "recall_mean": 0.575,
+      "recall_sd": 0.0
+    }
+  ],
+  "variogram": {
+    "sill": 18.124865852690093,
+    "distance_m_at_95pct_sill": 5250.0,
+    "bins": [
+      {
+        "distance_m": 250.0,
+        "gamma": 6.215616313051512,
+        "n": 918
+      },
+      {
+        "distance_m": 750.0,
+        "gamma": 8.50605437289015,
+        "n": 2631
+      },
+      {
+        "distance_m": 1250.0,
+        "gamma": 10.001585758873254,
+        "n": 4432
+      },
+      {
+        "distance_m": 1750.0,
+        "gamma": 12.29228446484871,
+        "n": 6138
+      },
+      {
+        "distance_m": 2250.0,
+        "gamma": 13.15687300306883,
+        "n": 7847
+      },
+      {
+        "distance_m": 2750.0,
+        "gamma": 13.860409500052796,
+        "n": 9408
+      },
+      {
+        "distance_m": 3250.0,
+        "gamma": 14.204449635487736,
+        "n": 10123
+      },
+      {
+        "distance_m": 3750.0,
+        "gamma": 16.259874305292858,
+        "n": 6963
+      },
+      {
+        "distance_m": 4250.0,
+        "gamma": 16.191199642697036,
+        "n": 2476
+      },
+      {
+        "distance_m": 4750.0,
+        "gamma": 15.090438041166966,
+        "n": 736
+      },
+      {
+        "distance_m": 5250.0,
+        "gamma": 17.76515944767417,
+        "n": 307
+      },
+      {
+        "distance_m": 5750.0,
+        "gamma": 13.073438250541555,
+        "n": 114
+      },
+      {
+        "distance_m": 6250.0,
+        "gamma": 38.904351130290756,
+        "n": 53
+      }
+    ]
+  },
+  "heteroscedasticity": {
+    "observed_LST": [
+      {
+        "bin": 0,
+        "n": 2188,
+        "residual_sd": 6.738647038279132
+      },
+      {
+        "bin": 1,
+        "n": 2187,
+        "residual_sd": 3.797227291771081
+      },
+      {
+        "bin": 2,
+        "n": 2187,
+        "residual_sd": 2.475408781891933
+      },
+      {
+        "bin": 3,
+        "n": 2188,
+        "residual_sd": 1.7613267329455988
+      }
+    ],
+    "elevation": [
+      {
+        "bin": 0,
+        "n": 2188,
+        "residual_sd": 1.8834551519679452
+      },
+      {
+        "bin": 1,
+        "n": 2181,
+        "residual_sd": 2.2386856530109953
+      },
+      {
+        "bin": 2,
+        "n": 2191,
+        "residual_sd": 4.60849406897871
+      },
+      {
+        "bin": 3,
+        "n": 2190,
+        "residual_sd": 6.52858979400358
+      }
+    ],
+    "built": [
+      {
+        "bin": 0,
+        "n": 2188,
+        "residual_sd": 5.729981355778002
+      },
+      {
+        "bin": 1,
+        "n": 2187,
+        "residual_sd": 4.760757834892094
+      },
+      {
+        "bin": 2,
+        "n": 2187,
+        "residual_sd": 2.9848831072040727
+      },
+      {
+        "bin": 3,
+        "n": 2188,
+        "residual_sd": 2.84286482012191
+      }
+    ]
+  },
+  "residential": {
+    "universe_n": 10785,
+    "universe_people": 4010143.9217309626,
+    "priority_n": 2157,
+    "priority_unpopulated_share": 0.0,
+    "priority_people": 1228925.4937076035,
+    "built_only_top20_n": 2330,
+    "built_only_unpopulated_share": 0.06566523605150215,
+    "intersection_built_only_and_citywide_n": 367,
+    "share_of_built_only_also_citywide": 0.1575107296137339,
+    "intersection_residential_and_citywide_n": 323,
+    "share_of_residential_also_citywide": 0.14974501622624015,
+    "jaccard_residential_vs_citywide": 0.012820003969041477,
+    "jaccard_built_only_vs_citywide": 0.01449218132996367,
+    "p90_only_jaccard_vs_model": 0.4789166952348303,
+    "citywide_p90_only_jaccard_vs_model": 0.7856678769348366,
+    "p90_finite_share": 1.0,
+    "weight_only": {
+      "n": 40,
+      "jaccard_mean": 0.8976640508324844,
+      "jaccard_p05": 0.8340668464838165,
+      "baseline_still_ge_90": 0.8317107093184979
+    },
+    "temperature_only": {
+      "n": 25,
+      "jaccard_mean": 0.7173932747530057,
+      "jaccard_p05": 0.6900435631582782,
+      "people_p50": 1266697.0534168328,
+      "baseline_still_ge_90": 0.6323597589244321,
+      "stable90_n": 1410,
+      "stable90_people": 1046450.2694800424
+    },
+    "population_source": {
+      "jaccard": 0.9190391459074733,
+      "people_ghsl": 1228925.4937076035,
+      "people_worldpop_on_ghsl_set": 1051973.5580092403,
+      "people_worldpop_recount": 1051973.5580092403
+    },
+    "joint": {
+      "n_scenarios": 1000,
+      "n_temperature_fields": 25,
+      "n_weights": 20,
+      "jaccard_mean": 0.6814083525108793,
+      "jaccard_p05": 0.6359499431171786,
+      "jaccard_p50": 0.6825273010920437,
+      "people_p05": 654270.4166190354,
+      "people_p50": 966178.2199124682,
+      "people_p95": 1636718.9323834882,
+      "baseline_still_ge_90": 0.5716272600834492,
+      "stable90_n": 1277,
+      "stable90_people": 519289.50841005374
+    }
+  },
+  "siting": {
+    "demand_n": 450,
+    "demand_share_of_residential_priority_pop": 0.9428036420216399,
+    "baseline_greedy_share": 0.5201937294022393,
+    "baseline_exact_share": 0.5209544927175802,
+    "baseline_exact_status": "Optimal",
+    "scenario_n": 25,
+    "greedy_fixed_p50": 0.5125535170835759,
+    "greedy_reopt_p50": 0.5127047575943432,
+    "greedy_regret_p50": 0.0,
+    "greedy_regret_p05": 0.0,
+    "greedy_regret_p95": 0.003343952982321907,
+    "greedy_regret_min": 0.0,
+    "greedy_regret_values": [
+      0.0033542135650482807,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.001971594980477942,
+      0.0008127413689884566,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0012170026232870557,
+      0.0,
+      0.01085746117227071,
+      0.003302910651416413,
+      0.0,
+      0.002051203977953664,
+      0.0008075681066265217,
+      0.0,
+      0.0,
+      0.0019855087108726632
+    ],
+    "always_selected": 7,
+    "n_ever": 14,
+    "exact_scenario_n": 25,
+    "exact_status_counts": {
+      "Optimal": 25
+    },
+    "exact_fixed_p50": 0.5131618651238692,
+    "exact_reopt_p50": 0.5139334922561378,
+    "exact_regret_p50": 0.0005895293402149449,
+    "exact_regret_p05": 0.0,
+    "exact_regret_p95": 0.0060486146147332494,
+    "exact_regret_min": 0.0,
+    "n_negative_exact_regret": 0,
+    "robust": {
+      "status": "Optimal",
+      "n_sites": 10,
+      "worst_share": 0.4917379859245367,
+      "median_share": 0.5131618651238692,
+      "baseline_exact_worst_share": 0.4917379859245367,
+      "baseline_exact_median_share": 0.5131618651238692
+    }
+  },
+  "siting_sites": [
+    {
+      "name": "HongSham market",
+      "fclass": "marketplace",
+      "x": 547613.7831668247,
+      "y": 4850419.657471993,
+      "lon": 87.5919471,
+      "lat": 43.8053098,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u5e08\u8303\u5927\u5b66\uff08\u6606\u4ed1\u6821\u533a\uff09",
+      "fclass": "university",
+      "x": 547428.555455571,
+      "y": 4853323.6360947555,
+      "lon": 87.58990177719315,
+      "lat": 43.83146715011368,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u519c\u4e1a\u5927\u5b66",
+      "fclass": "university",
+      "x": 545479.1639407836,
+      "y": 4851151.360763851,
+      "lon": 87.56547240585694,
+      "lat": 43.812031964872595,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u81ea\u6cbb\u533a\u6c34\u5229\u6c34\u7535\u6280\u5de5\u5b66\u6821",
+      "fclass": "college",
+      "x": 545335.8662813784,
+      "y": 4860746.185733707,
+      "lon": 87.56450511865928,
+      "lat": 43.89842586977804,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u4e4c\u9c81\u6728\u9f50\u804c\u4e1a\u5927\u5b66",
+      "fclass": "school",
+      "x": 552091.4082089358,
+      "y": 4848036.521683189,
+      "lon": 87.64737908196521,
+      "lat": 43.78355194280218,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5341\u4e00\u5e08\u4e2d\u5b66",
+      "fclass": "school",
+      "x": 541701.7338169345,
+      "y": 4860751.693508661,
+      "lon": 87.51925661872666,
+      "lat": 43.89869002761106,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u516c\u5b89\u5385\u8b66\u53f2\u9986",
+      "fclass": "museum",
+      "x": 547821.3914009521,
+      "y": 4847732.276666123,
+      "lon": 87.59428818164774,
+      "lat": 43.78110096893658,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u4e4c\u9c81\u6728\u9f50\u5e02\u7b2c\u5341\u4e09\u4e2d\u5b66",
+      "fclass": "school",
+      "x": 550988.5993843279,
+      "y": 4848451.905132611,
+      "lon": 87.63371399221151,
+      "lat": 43.787368570476524,
+      "frequency": 0.88,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5357\u516c\u56ed\u82b1\u9e1f\u9c7c\u5e02",
+      "fclass": "marketplace",
+      "x": 548758.2573820269,
+      "y": 4845990.488944404,
+      "lon": 87.6057718901666,
+      "lat": 43.7653578899076,
+      "frequency": 0.88,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u804c\u4e1a\u5927\u5b66(\u8fce\u5bbe\u6821\u533a)",
+      "fclass": "college",
+      "x": 542960.2153390516,
+      "y": 4861034.8284133645,
+      "lon": 87.53494898583517,
+      "lat": 43.90116689238413,
+      "frequency": 0.84,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u6559\u80b2\u5b66\u9662 \u0634\u0649\u0646\u062c\u0627\u06ad \u0645\u0627\u0626\u0627\u0631\u0649\u067e \u0626\u0649\u0646\u0633\u062a\u0649\u062a\u06c7\u062a\u0649",
+      "fclass": "university",
+      "x": 549434.352916235,
+      "y": 4850197.865064894,
+      "lon": 87.61455916909794,
+      "lat": 43.80319346931876,
+      "frequency": 0.16,
+      "in_baseline": false
+    },
+    {
+      "name": "\u4e4c\u9c81\u6728\u9f50\u5e02\u7b2c\u4e09\u5341\u4e00\u5c0f\u5b66",
+      "fclass": "school",
+      "x": 550170.8917122064,
+      "y": 4847966.09333604,
+      "lon": 87.62350621122978,
+      "lat": 43.78305055061508,
+      "frequency": 0.12,
+      "in_baseline": false
+    },
+    {
+      "name": "\u65b0\u7586\u751f\u4ea7\u5efa\u8bbe\u5175\u56e2\u7b2c\u5341\u4e8c\u5e08\u4e2d\u5b66",
+      "fclass": "college",
+      "x": 543282.3482348485,
+      "y": 4861714.019177726,
+      "lon": 87.53901524593529,
+      "lat": 43.907262977301684,
+      "frequency": 0.08,
+      "in_baseline": false
+    },
+    {
+      "name": "\u7ea2\u5c71\u4f53\u80b2\u4e2d\u5fc3\u4f53\u80b2\u573a",
+      "fclass": "stadium",
+      "x": 548847.9134766016,
+      "y": 4850685.741884268,
+      "lon": 87.60731356467763,
+      "lat": 43.807624945139096,
+      "frequency": 0.04,
+      "in_baseline": false
+    }
+  ],
+  "few_shot": [
+    {
+      "n_cal": 20,
+      "repeats": 12,
+      "raw_R2_mean": -2.2505683733000015,
+      "cal_R2_mean": 0.5014139183803111,
+      "cal_R2_sd": 0.31828110989523883,
+      "cal_RMSE_mean": 3.2901856183499323,
+      "raw_RMSE_mean": 8.67170500593693
+    },
+    {
+      "n_cal": 50,
+      "repeats": 12,
+      "raw_R2_mean": -2.2516762427761674,
+      "cal_R2_mean": 0.5462215353760013,
+      "cal_R2_sd": 0.14444589079988485,
+      "cal_RMSE_mean": 3.200526818699556,
+      "raw_RMSE_mean": 8.664181207697284
+    },
+    {
+      "n_cal": 100,
+      "repeats": 12,
+      "raw_R2_mean": -2.2305738670054915,
+      "cal_R2_mean": 0.45451063620355187,
+      "cal_R2_sd": 0.3391302640974106,
+      "cal_RMSE_mean": 3.4465246000424123,
+      "raw_RMSE_mean": 8.666194581906085
+    },
+    {
+      "n_cal": 200,
+      "repeats": 12,
+      "raw_R2_mean": -2.2522510892969883,
+      "cal_R2_mean": 0.5860080803993512,
+      "cal_R2_sd": 0.1570453906724545,
+      "cal_RMSE_mean": 3.0502661728641844,
+      "raw_RMSE_mean": 8.6717480194425
+    },
+    {
+      "n_cal": 500,
+      "repeats": 12,
+      "raw_R2_mean": -2.2251141336517315,
+      "cal_R2_mean": 0.6551754047664041,
+      "cal_R2_sd": 0.03253379973881862,
+      "cal_RMSE_mean": 2.8326997031176737,
+      "raw_RMSE_mean": 8.671487858137798
+    }
+  ],
+  "equal_n_wording": "The equal-size comparison suggests that sample size alone does not explain the lower built-up performance; differences in predictor coverage and outcome variability also contribute."
+}

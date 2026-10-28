@@ -1,0 +1,113 @@
+project:
+  name: citywide-accuracy-analysis
+  title: Land-surface temperature decision audit
+  subtitle: Analysis settings for the Urumqi temperature model
+  competition: ""
+  gee_project: hallowed-chain-458005-g9
+
+study:
+  country_group: CHN
+  city_name: Wulumuqishi
+  city_label: 乌鲁木齐市
+  city_aliases:
+    - Wulumuqishi
+    - Wulumuqixian
+    - Urumqi
+    - Wulumuqi
+  migration_cities:
+    - Yiningshi
+    - Lanzhoushi
+  summer_start: "06-01"
+  summer_end: "09-01"
+  years: [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  focus_year: 2024
+  roi_buffer_m: 0
+  crs_metric: EPSG:32645
+
+boundary:
+  asset: projects/hallowed-chain-458005-g9/assets/xinjiang_county
+  name_field: name
+  cities:
+    Wulumuqishi:
+      label: 乌鲁木齐市
+      names: [天山区, 沙依巴克区, 新市区, 水磨沟区, 头屯河区, 达坂城区, 米东区, 乌鲁木齐县]
+    Yiningshi:
+      label: 伊宁市
+      names: [伊宁市]
+
+scales:
+  lst_m: 30
+  feature_m: 10
+  analysis_m: 400
+  analysis_m_by_city:
+    Yiningshi: 200
+  train_sample_n: 9000
+  block_cv_m: 3000
+  block_cv_sensitivity_m: [2000, 3000, 5000]
+  downtown_window_m: 5000
+  downtown_bounds:
+    Wulumuqishi: [87.48, 43.72, 87.75, 43.98]
+
+model:
+  n_estimators: 500
+  learning_rate: 0.04
+  num_leaves: 31
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_samples: 20
+  random_state: 42
+  n_splits: 5
+
+features:
+  - B2
+  - B3
+  - B4
+  - B8
+  - B11
+  - B12
+  - NDVI
+  - NDBI
+  - NDWI
+  - BSI
+  - ALBEDO
+  - VV
+  - VH
+  - VV_minus_VH
+  - built
+  - trees
+  - grass
+  - water
+  - built_height
+  - elevation
+  - slope
+  - ERA5_T2M
+  - dist_water
+  - local_green
+
+uthi:
+  equal_weights: [0.25, 0.25, 0.25, 0.25]
+  high_risk_quantile: 0.80
+  annual_lo_q: 0.05
+  annual_hi_q: 0.95
+
+census_2020:
+  Wulumuqishi: 4054369
+  Yiningshi: 778047
+
+access:
+  walk_speed_kmh: 4.5
+  walk_speed_sensitivity_kmh: [3.5, 4.5, 5.0]
+  minutes: 15
+
+mclp:
+  n_new: [5, 10, 20]
+  max_demand_points: 450
+  max_candidates: 180
+
+osm:
+  network_type: walk
+  facility_tags:
+    leisure: [park, garden, playground, sports_centre, stadium, swimming_pool]
+    amenity: [library, hospital, clinic, community_centre, theatre, arts_centre, university, school, college, marketplace]
+    landuse: [recreation_ground]
+    tourism: [museum]

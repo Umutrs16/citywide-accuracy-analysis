@@ -1,0 +1,463 @@
+{
+  "cv": [
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.9227864263175299,
+      "RMSE": 4.2573567769945155,
+      "MAE": 2.826925669496896,
+      "Bias": 0.01486182798422451,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "lgbm",
+      "block_m": 3000.0,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.9315721786371352,
+      "RMSE": 4.007832626618581,
+      "MAE": 2.645502233609819,
+      "Bias": -0.00624820943640296,
+      "n_splits": 5,
+      "mode": "random",
+      "learner": "lgbm",
+      "block_m": null,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.8927605926905886,
+      "RMSE": 5.017304076412097,
+      "MAE": 3.363067899451556,
+      "Bias": -0.011650895889764307,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "rf",
+      "block_m": 3000.0,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.8298562605485573,
+      "RMSE": 6.319769036124126,
+      "MAE": 4.614782291850601,
+      "Bias": -0.0024150398002069488,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "ridge",
+      "block_m": 3000.0,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.9250637369817396,
+      "RMSE": 4.19410438999055,
+      "MAE": 2.759826458618404,
+      "Bias": 0.021040014607676547,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "lgbm",
+      "block_m": 2000.0,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "citywide",
+      "n": 8750,
+      "R2": 0.9164457038976634,
+      "RMSE": 4.428713768611171,
+      "MAE": 2.912989254421874,
+      "Bias": 0.012424218755454892,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "lgbm",
+      "block_m": 5000.0,
+      "y_sd": 15.321215456780664
+    },
+    {
+      "domain": "built",
+      "n": 865,
+      "R2": 0.627297274469516,
+      "RMSE": 3.0810395506655994,
+      "MAE": 2.067162182184233,
+      "Bias": -0.02324350237901403,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "lgbm",
+      "block_m": 3000.0,
+      "y_sd": 5.046798774702191
+    },
+    {
+      "domain": "built",
+      "n": 865,
+      "R2": 0.6657613471057655,
+      "RMSE": 2.917724788431214,
+      "MAE": 1.9517596214710133,
+      "Bias": 0.025298718961865474,
+      "n_splits": 5,
+      "mode": "random",
+      "learner": "lgbm",
+      "block_m": null,
+      "y_sd": 5.046798774702191
+    },
+    {
+      "domain": "built",
+      "n": 865,
+      "R2": 0.5538693108794537,
+      "RMSE": 3.3709090771196935,
+      "MAE": 2.1964777622839486,
+      "Bias": -0.008136283255708383,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "rf",
+      "block_m": 3000.0,
+      "y_sd": 5.046798774702191
+    },
+    {
+      "domain": "built",
+      "n": 865,
+      "R2": 0.5370728964926441,
+      "RMSE": 3.433778628312757,
+      "MAE": 2.38231872676636,
+      "Bias": 0.029169587275749625,
+      "n_splits": 5,
+      "mode": "spatial",
+      "learner": "ridge",
+      "block_m": 3000.0,
+      "y_sd": 5.046798774702191
+    }
+  ],
+  "shap": {
+    "n_citywide": 8750,
+    "n_built": 865,
+    "n_core": 429,
+    "spearman_citywide_vs_built": 0.9226086956521738,
+    "spearman_citywide_vs_core": 0.9086956521739129,
+    "terrain_share_citywide": 0.6545691916459043,
+    "terrain_share_built": 0.6645811178056361,
+    "terrain_share_core": 0.6711339581471383,
+    "rows": [
+      {
+        "feature": "elevation",
+        "citywide": 9.344950481111429,
+        "built": 8.344488247150746,
+        "core": 9.007222310333319
+      },
+      {
+        "feature": "ERA5_T2M",
+        "citywide": 1.9165062793297865,
+        "built": 1.430613119411753,
+        "core": 1.1969410709906467
+      },
+      {
+        "feature": "local_green",
+        "citywide": 0.7895843225993642,
+        "built": 0.6793803146877412,
+        "core": 0.737945509296553
+      },
+      {
+        "feature": "dist_water",
+        "citywide": 0.6898199667219889,
+        "built": 0.4305042994433412,
+        "core": 0.37233152943242653
+      },
+      {
+        "feature": "VH",
+        "citywide": 0.6230850354801554,
+        "built": 0.7136433031710376,
+        "core": 0.7276373652045289
+      },
+      {
+        "feature": "B12",
+        "citywide": 0.5514140542431855,
+        "built": 0.42381710367833636,
+        "core": 0.49107288722738274
+      },
+      {
+        "feature": "BSI",
+        "citywide": 0.3753194089898048,
+        "built": 0.40249462927039154,
+        "core": 0.42393135234139734
+      },
+      {
+        "feature": "VV",
+        "citywide": 0.32206113396343905,
+        "built": 0.34051256995043117,
+        "core": 0.3543561238416925
+      },
+      {
+        "feature": "trees",
+        "citywide": 0.3104678399554155,
+        "built": 0.14376975057736263,
+        "core": 0.1449770884284875
+      },
+      {
+        "feature": "B8",
+        "citywide": 0.303246980085622,
+        "built": 0.2101987911635213,
+        "core": 0.18420648748382384
+      },
+      {
+        "feature": "built",
+        "citywide": 0.28014999990873246,
+        "built": 0.3188764254635926,
+        "core": 0.3392391094099323
+      },
+      {
+        "feature": "NDBI",
+        "citywide": 0.2608115675988202,
+        "built": 0.1841500386052498,
+        "core": 0.16630775858394706
+      },
+      {
+        "feature": "grass",
+        "citywide": 0.24725291396046534,
+        "built": 0.12271274754661587,
+        "core": 0.12588809010221066
+      },
+      {
+        "feature": "NDVI",
+        "citywide": 0.17516770675894436,
+        "built": 0.10032572661855824,
+        "core": 0.09792960444164037
+      },
+      {
+        "feature": "water",
+        "citywide": 0.17345864370761552,
+        "built": 0.10158845578168797,
+        "core": 0.08689593902375191
+      },
+      {
+        "feature": "slope",
+        "citywide": 0.1671518688342613,
+        "built": 0.08826643225364521,
+        "core": 0.08278728153501935
+      },
+      {
+        "feature": "B11",
+        "citywide": 0.16399606683585038,
+        "built": 0.12306282030335576,
+        "core": 0.11091503650470876
+      },
+      {
+        "feature": "B2",
+        "citywide": 0.1589823884432711,
+        "built": 0.11995973492550703,
+        "core": 0.11406585167009814
+      },
+      {
+        "feature": "NDWI",
+        "citywide": 0.14885129450027745,
+        "built": 0.10916122668229905,
+        "core": 0.11740116392834661
+      },
+      {
+        "feature": "B3",
+        "citywide": 0.13089414268072672,
+        "built": 0.12396474422092933,
+        "core": 0.1264014522855505
+      },
+      {
+        "feature": "ALBEDO",
+        "citywide": 0.11391007323013169,
+        "built": 0.09389754632645844,
+        "core": 0.08257071704477689
+      },
+      {
+        "feature": "VV_minus_VH",
+        "citywide": 0.11266227024201986,
+        "built": 0.07947914970373406,
+        "core": 0.07383584514047932
+      },
+      {
+        "feature": "B4",
+        "citywide": 0.08588092847220162,
+        "built": 0.0618005712208318,
+        "core": 0.06141850393324504
+      },
+      {
+        "feature": "built_height",
+        "citywide": 0.0141157493068138,
+        "built": 0.0948128996586772,
+        "core": 0.10143785390673396
+      }
+    ]
+  },
+  "weight_only": {
+    "n_draw": 1000,
+    "jaccard_mean": 0.9163867513384587,
+    "jaccard_sd": 0.06450406719709362,
+    "jaccard_p05": 0.7679947017062946,
+    "spearman_mean_every_20th": 0.9960820319293359,
+    "archived_csv_jaccard_mean": 0.9163867513384587,
+    "reconstruction_corr_with_UTHI": 1.0,
+    "stable_p75_share_of_baseline": 0.9246607593853002
+  },
+  "joint": {
+    "n_residual_fields": 25,
+    "n_weights": 200,
+    "n_population_sources": 2,
+    "n_scenarios": 10000,
+    "design": "25 block-constant OOF residual fields \u00d7 200 archived constrained weights (every 5th of 1000) \u00d7 GHSL and WorldPop",
+    "jaccard_vs_baseline_mean": 0.7835508756262001,
+    "jaccard_vs_baseline_p05": 0.6302692690102909,
+    "jaccard_vs_baseline_p50": 0.8153983648761282,
+    "jaccard_vs_baseline_p95": 0.8498634042047749,
+    "baseline_top20_still_ge_0.75": 0.8188005650443047,
+    "baseline_top20_still_ge_0.90": 0.6922648859209795,
+    "stable90_n": 16409,
+    "stable90_share_of_baseline": 0.6922648859209795,
+    "people_p05": 698236.4677063705,
+    "people_p50": 1165406.9293071555,
+    "people_p95": 1729354.7696426702,
+    "stable90_people_ghsl": 626671.9056745261,
+    "stable90_people_worldpop": 608376.8052920153,
+    "baseline_people_ghsl": 1165608.579938303,
+    "baseline_people_worldpop": 975982.0392116592,
+    "mean_p_inside_baseline": 0.8767818971790592,
+    "mean_p_outside_baseline": 0.03080690467017679,
+    "factors": {
+      "zero_residual_ghsl_jaccard_vs_baseline": 1.0,
+      "population_source_jaccard_equal_weight": 0.9907963696791512,
+      "population_source_people_ghsl": 1165608.579938303,
+      "population_source_people_worldpop": 955371.7309658718,
+      "lst_only_equal_weight_ghsl_jaccard_mean": 0.8239822409746331,
+      "lst_only_equal_weight_ghsl_jaccard_p05": 0.8099482640987884,
+      "lst_only_equal_weight_ghsl_jaccard_p50": 0.8257199796803564,
+      "people_ghsl_p05": 759343.1952080833,
+      "people_ghsl_p50": 1287547.682596237,
+      "people_ghsl_p95": 1787474.5864239307,
+      "people_worldpop_p05": 667577.3285303086,
+      "people_worldpop_p50": 1080352.0481726676,
+      "people_worldpop_p95": 1513448.7647881736
+    }
+  },
+  "mclp": {
+    "k": 10,
+    "radius_m": 1125,
+    "n_candidates": 180,
+    "n_demand": 450,
+    "n_scenarios": 50,
+    "solver": "greedy",
+    "baseline_share": 0.575084887220248,
+    "archived_pulp_share": 0.575084887220248,
+    "share_p05": 0.5467887044777723,
+    "share_p50": 0.5622844754614361,
+    "share_p95": 0.5835086607707345,
+    "set_jaccard_mean": 0.6979953379953381,
+    "set_jaccard_p05": 0.5384615384615384,
+    "baseline_sites_always_selected": 5,
+    "baseline_sites_ge_80": 6,
+    "n_sites_ge_80": 6,
+    "n_sites_ever": 16,
+    "baseline_site_frequency": [
+      0.54,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.5,
+      0.5,
+      1.0,
+      0.88,
+      0.7
+    ]
+  },
+  "aoa": {
+    "definition": "Dissimilarity index = distance to nearest Urumqi training point in standardized predictor space, divided by the mean nearest-neighbor distance among training points. Threshold = maximum training DI at or below the upper boxplot fence (Q3 + 1.5 IQR), following Meyer and Pebesma (2021).",
+    "threshold": 2.2136265665271466,
+    "train_di_mean": 1.0,
+    "yining_inside_share": 0.9822725818979303,
+    "yining_built_inside_share": 0.9730273752012882,
+    "transfer_all": {
+      "n": 21887,
+      "R2": -2.2349522508766713,
+      "RMSE": 8.664517814864316,
+      "MAE": 8.233390094797459,
+      "Bias": 8.222673151365203
+    },
+    "transfer_inside": {
+      "n": 21499,
+      "R2": -2.247888353136734,
+      "RMSE": 8.652965405558371,
+      "MAE": 8.225803906325373,
+      "Bias": 8.216598467893443,
+      "share": 0.9822725818979303
+    },
+    "transfer_outside": {
+      "n": 388,
+      "R2": -2.0310842831893705,
+      "RMSE": 9.282191430383085,
+      "MAE": 8.653739233873228,
+      "Bias": 8.559270110023457,
+      "share": 0.017727418102069722
+    },
+    "transfer_built_inside": {
+      "n": 7251,
+      "R2": -8.531192876538945,
+      "RMSE": 9.244715311055375,
+      "MAE": 8.929724438406605,
+      "Bias": 8.927404919953432,
+      "share": 0.33129254808790604
+    },
+    "transfer_built_outside": {
+      "n": 201,
+      "R2": -2.947387574242477,
+      "RMSE": 8.446048863328743,
+      "MAE": 7.834576538400556,
+      "Bias": 7.731822538116991,
+      "share": 0.009183533604422717
+    },
+    "largest_feature_shifts": [
+      {
+        "feature": "built",
+        "standardized_mean_difference": 0.8576813828395352
+      },
+      {
+        "feature": "ERA5_T2M",
+        "standardized_mean_difference": 0.8223389054988114
+      },
+      {
+        "feature": "NDWI",
+        "standardized_mean_difference": -0.8159177577645728
+      },
+      {
+        "feature": "elevation",
+        "standardized_mean_difference": -0.8084482972061768
+      },
+      {
+        "feature": "BSI",
+        "standardized_mean_difference": -0.7884603985348941
+      },
+      {
+        "feature": "NDVI",
+        "standardized_mean_difference": 0.7702515518554996
+      },
+      {
+        "feature": "NDBI",
+        "standardized_mean_difference": -0.7619558842474778
+      },
+      {
+        "feature": "slope",
+        "standardized_mean_difference": -0.6577061259794946
+      }
+    ],
+    "archived_transfer_2024": {
+      "R2": -3.0189514499195944,
+      "RMSE": 9.65754724846168,
+      "Bias": 9.313894778689086
+    }
+  },
+  "domains_train": {
+    "citywide_n": 8750,
+    "built_n": 865,
+    "core_n": 429,
+    "citywide_lst_sd": 15.322091029856585,
+    "built_lst_sd": 5.049718531252306,
+    "core_lst_sd": 3.1323795713428972
+  }
+}

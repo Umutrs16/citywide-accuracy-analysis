@@ -1,0 +1,271 @@
+{
+  "cross_year": {
+    "all_matches_within_200m": {
+      "n": 10785,
+      "observed_2024_seasonal_mean": {
+        "spearman_vs_seasonal": 0.4978471579634694,
+        "spearman_vs_p90": 0.8660320701724079,
+        "recall_seasonal_hot_fifth": 0.4893419833178869,
+        "recall_p90_hot_fifth": 0.6842592592592592
+      },
+      "predicted_2024_seasonal_mean": {
+        "spearman_vs_seasonal": 0.41654117212954,
+        "spearman_vs_p90": 0.7787765950847576,
+        "recall_seasonal_hot_fifth": 0.4045412418906395,
+        "recall_p90_hot_fifth": 0.5939814814814814
+      },
+      "observed_2024_p90": {
+        "spearman_vs_seasonal": 0.5590166409378982,
+        "spearman_vs_p90": 0.9271971435993475,
+        "recall_seasonal_hot_fifth": 0.5426320667284523,
+        "recall_p90_hot_fifth": 0.7828703703703703
+      }
+    },
+    "one_2024_point_per_2025_point": {
+      "n": 10785,
+      "observed_2024_seasonal_mean": {
+        "spearman_vs_seasonal": 0.4978471579634694,
+        "spearman_vs_p90": 0.8660320701724079,
+        "recall_seasonal_hot_fifth": 0.4893419833178869,
+        "recall_p90_hot_fifth": 0.6842592592592592
+      },
+      "predicted_2024_seasonal_mean": {
+        "spearman_vs_seasonal": 0.41654117212954,
+        "spearman_vs_p90": 0.7787765950847576,
+        "recall_seasonal_hot_fifth": 0.4045412418906395,
+        "recall_p90_hot_fifth": 0.5939814814814814
+      },
+      "observed_2024_p90": {
+        "spearman_vs_seasonal": 0.5590166409378982,
+        "spearman_vs_p90": 0.9271971435993475,
+        "recall_seasonal_hot_fifth": 0.5426320667284523,
+        "recall_p90_hot_fifth": 0.7828703703703703
+      }
+    },
+    "match": {
+      "universe_n": 10785,
+      "within_200m": 10785,
+      "unmatched_or_farther_than_200m": 0,
+      "distance_m_mean": 1.8565589764857266e-10,
+      "distance_m_median": 0.0,
+      "distance_m_max": 8.38271157229072e-09,
+      "unique_2025_targets": 10785,
+      "targets_used_more_than_once": 0,
+      "extra_2024_points_on_a_shared_target": 0,
+      "max_2024_points_on_one_2025_point": 1
+    }
+  },
+  "nearest_point": {
+    "universe_n": 10799,
+    "priority_n": 2160,
+    "priority_people": 1155892.7524529654,
+    "temperature_only": {
+      "n": 25,
+      "jaccard_mean": 0.7004642558919721,
+      "stable90_n": 1123,
+      "stable90_people": 935626.8015361385
+    },
+    "joint_400": {
+      "n": 400,
+      "jaccard_mean": 0.6721835495771643,
+      "stable90_n": 1044,
+      "stable90_people": 510856.87738085433
+    }
+  },
+  "scenario_design": {
+    "temperature_draws": 25,
+    "temperature_seed": 21,
+    "residual_pool": "Built-up out-of-fold residuals. A 3 km block uses its own residuals when at least three exist; otherwise it draws from the built-up pool.",
+    "slice_a_rule": "Indices 0, 4, 8, 12, 16 and 20 of that fixed draw. Not selected because they were extreme.",
+    "slice_b_rule": "Indices 1, 5, 9, 13, 17 and 21. A shifted slice, used to see whether the first slice was unusual.",
+    "weights": {
+      "equal": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "shifted_row_in_archived_draws": 791,
+      "shifted_vector": [
+        0.1546900463835864,
+        0.1631999836417494,
+        0.3376217974770892,
+        0.3444881724975749
+      ],
+      "why": "The archived weight vector with the largest L1 distance from equal weights."
+    },
+    "populations": "Nearest-point GHSL and nearest-point WorldPop.",
+    "solver": "PuLP CBC, 6 second limit, 1 percent relative gap. The baseline uses 15 seconds."
+  },
+  "siting_slice_a": {
+    "label": "fields 0,4,8,12,16,20",
+    "field_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "n": 24,
+    "baseline_status": "Optimal",
+    "baseline_objective": 555209.1623337513,
+    "baseline_share_of_450": 0.493654281028965,
+    "baseline_share_of_all_priority": 0.4645377209691662,
+    "exact_regret_p50": 0.016161483631997903,
+    "exact_regret_p95": 0.03468486418474602,
+    "exact_regret_min": 0.0,
+    "exact_regret_max": 0.03958953961830686,
+    "people_loss_p50": 16495.62927798835,
+    "people_loss_p95": 33375.584378064734,
+    "people_loss_max": 37331.059104449036,
+    "full_fixed_p50": 0.4481026046127844,
+    "status_counts": {
+      "Optimal": 24
+    },
+    "always_selected": 5,
+    "n_ever": 21
+  },
+  "siting_slice_b": {
+    "label": "fields 1,5,9,13,17,21",
+    "field_indices": [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21
+    ],
+    "n": 24,
+    "baseline_status": "Optimal",
+    "baseline_objective": 555209.1623337513,
+    "baseline_share_of_450": 0.493654281028965,
+    "baseline_share_of_all_priority": 0.4645377209691662,
+    "exact_regret_p50": 0.012402138350285113,
+    "exact_regret_p95": 0.03226369836338366,
+    "exact_regret_min": 0.0,
+    "exact_regret_max": 0.035940061496183506,
+    "people_loss_p50": 12502.353470409971,
+    "people_loss_p95": 28081.05776592536,
+    "people_loss_max": 33845.13101871546,
+    "full_fixed_p50": 0.4494133289410418,
+    "status_counts": {
+      "Optimal": 24
+    },
+    "always_selected": 5,
+    "n_ever": 22
+  },
+  "siting_slice_a_regrets": [
+    0.0,
+    0.009397592844439195,
+    0.03958953961830686,
+    0.02771732914898517,
+    0.005542931700147635,
+    0.010665455246588795,
+    0.02333884373930495,
+    0.03312665457747027,
+    0.0,
+    0.011619943626070717,
+    0.032212842114511364,
+    0.03464183655428438,
+    0.0,
+    0.0092609096323506,
+    0.03440363188883783,
+    0.025223542081559525,
+    0.0037400772852730912,
+    0.011762904091230486,
+    0.024544772701903417,
+    0.03469245729600395,
+    0.0,
+    0.009041685246099274,
+    0.02056006317276532,
+    0.027134233874428593
+  ],
+  "alternate_optima_baseline": {
+    "n_equal_optima_found": 1,
+    "first_objective": 555209.1623337513,
+    "first_status": "Optimal",
+    "later_objectives": [
+      554243.5245989881
+    ],
+    "stopped_because_worse": true,
+    "pairwise_shared_sites": [],
+    "shared_with_next_set": 9,
+    "only_in_returned_plan": "\u5171\u9752\u56e2\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a\u59d4\u5458\u4f1a\u56e2\u6821",
+    "only_in_next_plan": "\u4e4c\u9c81\u6728\u9f50\u804c\u4e1a\u5927\u5b66",
+    "next_objective": 554243.5245989881,
+    "census_scaled_people_lost_on_capped_demand": 933.7
+  },
+  "siting_sites": [
+    {
+      "name": "HongSham market",
+      "lon": 87.5919471,
+      "lat": 43.8053098,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u519c\u4e1a\u5927\u5b66",
+      "lon": 87.56547240585694,
+      "lat": 43.812031964872595,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u516c\u5b89\u5385\u8b66\u53f2\u9986",
+      "lon": 87.59428818164774,
+      "lat": 43.78110096893658,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u81ea\u6cbb\u533a\u6c34\u5229\u6c34\u7535\u6280\u5de5\u5b66\u6821",
+      "lon": 87.56450511865928,
+      "lat": 43.89842586977804,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5341\u4e00\u5e08\u4e2d\u5b66",
+      "lon": 87.51925661872666,
+      "lat": 43.89869002761106,
+      "frequency": 1.0,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u5e08\u8303\u5927\u5b66\uff08\u6606\u4ed1\u6821\u533a\uff09",
+      "lon": 87.58990177719315,
+      "lat": 43.83146715011368,
+      "frequency": 0.625,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5357\u516c\u56ed\u82b1\u9e1f\u9c7c\u5e02",
+      "lon": 87.6057718901666,
+      "lat": 43.7653578899076,
+      "frequency": 0.625,
+      "in_baseline": true
+    },
+    {
+      "name": "\u65b0\u7586\u804c\u4e1a\u5927\u5b66(\u8fce\u5bbe\u6821\u533a)",
+      "lon": 87.53494898583517,
+      "lat": 43.90116689238413,
+      "frequency": 0.5,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5171\u9752\u56e2\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a\u59d4\u5458\u4f1a\u56e2\u6821",
+      "lon": 87.65049865944832,
+      "lat": 43.78407338760151,
+      "frequency": 0.20833333333333334,
+      "in_baseline": true
+    },
+    {
+      "name": "\u5175\u56e2\u4e09\u4e2d",
+      "lon": 87.63363832978533,
+      "lat": 43.78319877053152,
+      "frequency": 0.20833333333333334,
+      "in_baseline": true
+    }
+  ]
+}
