@@ -1,0 +1,13 @@
+Item,Value
+Population assignment,Nearest-point GHSL and nearest-point WorldPop
+Scored against,Nearest-point equal-weight baseline
+Scenarios,400
+Mean Jaccard similarity,0.672184
+Points in at least 90% of scenarios,1044
+Census-scaled residents in that core,510856.9
+Residual-field seed,21
+Residual fields,25
+Block size,3 km
+Weight vectors,Equal weights and the first eight of every fiftieth archived simplex row
+Individual priority sets stored,"No. The JSON stores the mean, the count, and the stable core."
+Script,analysis/revision4.py
