@@ -3,7 +3,7 @@ project:
   title: Land-surface temperature decision audit
   subtitle: Analysis settings for the Urumqi temperature model
   competition: ""
-  gee_project: hallowed-chain-458005-g9
+  gee_project: ""
 
 study:
   country_group: CHN
@@ -25,7 +25,7 @@ study:
   crs_metric: EPSG:32645
 
 boundary:
-  asset: projects/hallowed-chain-458005-g9/assets/xinjiang_county
+  asset: ""
   name_field: name
   cities:
     Wulumuqishi:
